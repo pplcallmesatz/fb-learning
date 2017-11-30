@@ -80,12 +80,12 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
       
-      grop(response.userID);
+      grop(response.id);
     });
   }
   
    function grop(data) {
-     console.log(data.userID);
+     console.log(data);
 FB.api(
     "/data.userID/group",
     function (response) {
