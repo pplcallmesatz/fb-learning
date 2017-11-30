@@ -79,8 +79,22 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+      
+      grop(response.userID);
     });
   }
+  
+   function grop(data) {
+FB.api(
+    "/data.userID/group",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        console.log(response);
+      }
+    }
+);
+   };
 </script>
 
 <!--
